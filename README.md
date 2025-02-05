@@ -1,7 +1,7 @@
 # ELONgated email formatter / defrickifier
 just a simple 80% email linter/formatter to strip identifying info that may have been inserted into *certain* emails sent by malicious non-state-but-wants-to-pretend-to-be-state billionaire muskrats.
 
-try it here with github preview: https://html-preview.github.io/?url=https://raw.githubusercontent.com/shaneish/dissent_formatter/refs/heads/main/index.html
+[try it here with github preview](https://html-preview.github.io/?url=https://raw.githubusercontent.com/shaneish/dissent_formatter/refs/heads/main/index.html)
 
 #### MAKE SURE YOU RUN THROUGH A SPELLCHECK AFTER!  THE EASIEST WAY TO BEAT THIS IS TO USE UNIQUE SPELLING ERRORS OR INTRODUCE NON-STANDARD CHARACTERS THAT INTRODUCE SPELLING ERRORS WHEN SKIPPED!
 
