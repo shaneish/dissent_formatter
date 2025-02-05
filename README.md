@@ -8,7 +8,6 @@ try it here with github preview: https://html-preview.github.io/?url=https://raw
 #### MAKE SURE YOU AREN'T EMAILING OUT IN PLAIN TEXT.  STORE IN A PASSWORD PROTECTED ZIP, ENCRYPT, OR CYPHER THE FORMATTED EMAIL BEFORE SENDING VIA EMAIL OR OTHER METHODS!
 
 ## notes
----
 ideally, you'd run similar code locally in your terminal so you don't need to worry about escaping email traffic to strip the email.  don't trust that it isn't being monitored.  tomorrow i can throw a powershell, bash, and python script together to do the same thing, should be relatively straightforward.
 
 this isn't perfect, but it's quick and easy to use.  it strips all non-standard characters, so if they try some funny business like inserting an "Ḥ" for "H" ("Ḥello there federal employees...") it will remove it completely -- SO MAKE SURE YOU RUN THE OUTPUT THROUGH A SPELLCHECK TO ENSURE ANY SUCH MALARKEY IS DETECTED.
