@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Text Processor with Spell Check</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+    textarea {
+      width: 100%;
+      height: 150px;
+      margin-bottom: 10px;
+      padding: 10px;
+      font-size: 16px;
+      box-sizing: border-box;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h1>Text Processor</h1>
+  <!-- Input Text Area -->
+  <textarea id="inputText" placeholder="Enter your text here..."></textarea>
+  <br>
+  <!-- Process Button -->
+  <button id="processBtn">Process Text</button>
+  <br><br>
+  <!-- Output Text Area with Spell Check enabled -->
+  <textarea id="outputText" placeholder="Processed text will appear here..." readonly spellcheck="true"></textarea>
+
+  <script>
+    function processString(input) {
+      return input.replace(/[\.\?!,\-_@#%\$\^\&*()\[\]{}:;'"<>\\\/+=`~ ]{2,}/g, " ")
+        .replace(/[,\-_@#%\$\^\&*()\[\]{}:;'"<>\\\/+=`~]/g, " ")
+        .replace(/[^a-zA-Z0-9\.\?! \n]/g, " ")
+        .replace(/[\.\?!]/g, "\n")
+        .replace(/ {2,}/g, " ")
+        .replace(/ \n/g, "\n")
+        .replace(/\n /g, "\n")
+        .replace(/\n{2,}/g, "\n")
+        .trim()
+        .toUpperCase();
+    }
+
+    // Add event listener to the button
+    document.getElementById("processBtn").addEventListener("click", function() {
+      const input = document.getElementById("inputText").value;
+      const processed = processString(input);
+      document.getElementById("outputText").value = processed;
+    });
+  </script>
+</body>
+</html>
