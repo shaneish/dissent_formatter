@@ -37,8 +37,9 @@
   <script>
     function processString(input) {
       return input.replace(/[\.\?!,\-_@#%\$\^\&*()\[\]{}:;'"<>\\\/+=`~ ]{2,}/g, " ")
-        .replace(/[,\-_]/g, " ")
-        .replace(/@#%\$\^&*()\[\]{}:;'"<>\\\/+=`~/g, "")
+        .replace(/@/g, " at ")
+        .replace(/[:;'"<>\\\/+=`~]/g, "")
+        .replace(/[,\-_#%\$\^&*()\[\]{}]/g, " ")
         .replace(/[^a-zA-Z0-9\.\?! \n]/g, " ")
         .replace(/[\.\?!]/g, "\n")
         .replace(/ {2,}/g, " ")
